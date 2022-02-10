@@ -1,0 +1,77 @@
+.graphcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $secondary-color;
+}
+.graph {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  filter: blur(4px) brightness(0.7) contrast(1.3);
+  opacity: 0.8;
+  &__axis {
+    width: 80%;
+    height: 85%;
+    border-left: 2.5px solid $text-color;
+    border-bottom: 2.5px solid $text-color;
+    position: relative;
+    &__plot {
+      background-color: $accentone-color;
+      width: 20%;
+      height: 50px; //todo
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      display: grid;
+      place-items: center;
+    }
+    .graph__icon {
+      width: 80%;
+    }
+    .limiternext {
+      position: absolute;
+      height: 2px;
+      background-color: lighten($success-color, 10%);
+      left: 0;
+      width: 45%;
+
+      &::before {
+        content: attr(data-val);
+        color: #fff;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        transform: translateX(-18%);
+      }
+    }
+    .limiterprev {
+      @extend .limiternext;
+      &::before {
+        @extend .limiternext::before;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .graph {
+    &__axis {
+      .graph__icon {
+        width: 70%;
+      }
+      .limiternext {
+        &::before {
+          transform: translateX(-13%);
+        }
+      }
+      .limiterprev {
+        &::before {
+          transform: translateX(-13%);
+        }
+      }
+    }
+  }
+}

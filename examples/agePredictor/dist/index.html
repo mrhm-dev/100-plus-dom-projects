@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cat,guess,squirrel,dog,puppy,prediction,hints,catphoto,log,age prediction" />
+    <meta name="description" content="This site renders static games and evaluates scores and predictions at a time. " />
+    <meta property="og:title" content="Age Prediction || Guesser" />
+    <meta
+      property="og:description"
+      content="Test your guess and prediction over different contexts. cheers 🍻."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://predictmyage.netlify.app" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Age Guesser || Predictor</title>
+    <link rel="icon" type="image/png" href="./assets/images/squirrel.png">
+    <link rel="stylesheet" href="./styles/style.min.css" />
+  </head>
+  <body>
+    <canvas class="display-none"></canvas>
+
+    <!-- start header -->
+    <header>
+      <nav class="header__nav">
+        <div>
+          <button class="btn-playAgain">Replay</button>
+        </div>
+
+        <ul class="scoreBoard">
+          <li>Score: <span class="score">100</span></li>
+          <li>High-Score: <span class="highScore">00</span></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- start main -->
+    <main>
+      <section class="section-content">
+        <figure class="content-image">
+          <h2 class="content-heading">
+            Guess my age in <mark class="highlight-text">months</mark> 🐹
+          </h2>
+          <img
+            class="heroimage"
+            src="./assets/images/404.svg"
+            alt="cute creature acting on web."
+          />
+          <div class="loadholder"><div class=""></div></div>
+        </figure>
+
+        <div class="client">
+          <div class="client__field">
+            <input
+              type="number"
+              name="clientInput"
+              class="input-client"
+              min="4"
+              max="20"
+              placeholder="4 - 20"
+              tabindex="-1"
+            />
+            <button tabindex="-2" class="btn-check">Check 🍳</button>
+          </div>
+          <div class="client__message">
+            <span class="toBe-shown">Message:</span>
+            <span class="message">start guessing 🎃🎃🎃.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-hints">
+        <div class="hints-warning">
+          <article class="hints-text">
+            <p>Every wrong prediction score will be reduced by&nbsp;3.</p>
+          </article>
+
+          <article class="hints-text">
+            <p>If you get first hint, your scored will be reduced by&nbsp;5.</p>
+          </article>
+
+          <article class="hints-text">
+            <p>For second hints, your score will be reduced by&nbsp;7.</p>
+          </article>
+        </div>
+
+        <div class="hints">
+          <h2 class="hints-title">Get Hints :</h2>
+
+          <div class="collapsible">
+            <div data-h="1" class="collapsible__header">
+              <h2>Preview Hints - 1</h2>
+              <img src="./assets/images/chevron.svg" alt="an animated chevron." />
+            </div>
+          </div>
+          <div class="collapsible__content">
+            <div class="hints-one">
+              
+            </div>
+            </div>
+          </div>
+
+          <div class="collapsible">
+            <div data-h="2" class="collapsible__header">
+              <h2>Preview Hints - 2</h2>
+              <img src="./assets/images/chevron.svg" alt="an animated chevron." />
+            </div>
+          </div>
+          <div class="collapsible__content">
+            <div class="hints-two">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer>
+      <div class="footer-icons">
+        
+        <a class="iconNtext" href="https://www.linkedin.com/in/jorjis-hasan-4163a81a4/" target="_blank" rel="nofollow">
+          <i style="color:#EBA495" class="icon fab fa-linkedin fa-2x"></i>
+          <span class="text">linkedin</span>
+        </a>
+        
+        <a class="iconNtext" href="https://codepen.io/jorjis121" target="_blank" rel="nofollow">
+          <i style="color:#fff" class="icon fab fa-codepen fa-2x"></i>
+          <span class="text">codepen</span>
+        </a>
+        <a class="iconNtext" href="https://www.hackerrank.com/_jorjis" target="_blank" rel="nofollow">
+          <i style= "color:#1BA94C; "class="icon fab fa-hackerrank fa-2x"></i>
+          <span class="text">hackerrank</span>
+        </a>
+        
+        <a class="iconNtext" href="https://github.com/jorjis212" target="_blank" rel="nofollow">
+         <i style="color:#fff"  class="icon fab fa-github fa-2x"></i>
+          <span class="text">github</span>
+        </a>
+
+      </div>
+      <div class="footer-text">Made from <span class="fp"><img src="./assets/images/footer-icons/heart.svg" alt=""></span> by jorjis, 2019-2022. </div>
+    </footer>
+    <!-- scripting [jorjis hasan]-->
+    <script src="./ftp.min.js"></script>
+    <script src="./js/app.179.js"></script>
+  </body>
+</html> 
