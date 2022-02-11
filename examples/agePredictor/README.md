@@ -1,12 +1,4 @@
-## Clone this project using command-line :
-
-```bash
-git clone https://github.com/jorjis212/agePredictor.git
-```
-
-<br>
-
-## Connect me on :
+# **Connect me on :**
 
 [![Hackerrank][hackerrank-shield]][hackerrank-url]
 [![Leetcode][leetcode-shield]][leetcode-url]
@@ -57,6 +49,6 @@ git clone https://github.com/jorjis212/agePredictor.git
 [leetcode-shield]: https://img.shields.io/badge/-Leetcode-black.svg?style=flat-square&logo=leetcode&color=555&logoColor=white
 [leetcode-url]: https://leetcode.com/_jorjis/
 [codepen-shield]: https://img.shields.io/badge/-Codepen-black.svg?style=flat-square&logo=codepen&color=555&logoColor=white
-[codepen-url]: https://instagram.com/learnwithsumit
+[codepen-url]: https://codepen.io/jorjis
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jorjis-hasan-4163a81a4/
