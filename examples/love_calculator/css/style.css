@@ -5,12 +5,9 @@
     background: pink;
 }
 h1 {
-    /* font-family: 'Ubuntu', sans-serif; */
     color: red;
-    /* font-size: 22px; */
 }
 p {
-    font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     color: hotpink;
 }
