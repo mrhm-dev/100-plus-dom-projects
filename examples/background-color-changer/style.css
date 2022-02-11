@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-color {
+  border-radius: 1rem;
+  padding: 1rem 4rem;
+  background-color: #3c5bfa;
+  font-family: inherit;
+  font-size: 1.25rem;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+
+.change-color:focus {
+  outline: 2px solid #3c5bfa;
+  outline-offset: 4px;
+}
