@@ -13,3 +13,4 @@ In this repository, you will find source codes, explanations, and other resource
 ## Course Curriculum
 
    - 1 [100+ DOM Projects in Bangla | Welcome](https://youtu.be/QnfMLiS7_fo)
+   - 2 [Generate RGB Color By Clicking](https://youtu.be/AVaLA-Tx18U)
