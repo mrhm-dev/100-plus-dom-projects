@@ -1,4 +1,3 @@
-
 <h1 align="center"> Love Calculator </h1> <br>
 <p align="center">
   <a href="https://programmers-love-calculator.netlify.app/">
@@ -42,7 +41,11 @@ A few of the things you need to do to calculate with Love Calculator:
 
 ## Author
 
+<br/>
+
 ### This project is created by [Shafin](https://github.com/Shoyayeb)
+
+<h3>📫 How to reach me <a href="mailto:sa.fine@outlook.com">sa.fine@outlook.com</a></h3>
 
 <br/>
 
