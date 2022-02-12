@@ -1,27 +1,31 @@
-# **Connect me on :**
+# Connect me on :
 
 [![Hackerrank][hackerrank-shield]][hackerrank-url]
 [![Leetcode][leetcode-shield]][leetcode-url]
 [![Codepen][codepen-shield]][codepen-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-![project Overview,](./dist/assets/images/minimalisticMoc@HD.png)
-
-# Toggle the [project](https://predictmyage.netlify.app/ "predict my age") 👋
+![project Overview,](./dist/assets/frameMac.png)
 
 <br>
 
-## Complexity faced during this project :
+# Toggle the [project](https://rollyourluck.netlify.app/ "my version") 👋
+
+<br>
+
+# This project idea was inspired from [That 👈](https://pig-game-v2.netlify.app/ "jonas project")
+
+## With the help of just an idea, I implement the whole new project's UI and functionality from the ground up. Due to the DRY principle, I refactor whole codebases for standard being.
+
+<br>
+
+# **Features:**
+
+- ### You can customize player name.
+- ### Very clean UI
+- ### Automated toss process
 
 ---
-
-> ### Event debounce
-
-> ### Event bubbling & capturing
-
-> ### Perfect Shuffle
-
-<br>
 
 ## Tools and Technology used for this project :
 

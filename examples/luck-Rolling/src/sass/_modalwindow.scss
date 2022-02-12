@@ -1,0 +1,106 @@
+.help-icon {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+
+  img {
+    width: 70px;
+  }
+}
+mark {
+  background: #69f0ae;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+mark:last-child {
+  background: #354e8b;
+}
+.notable {
+  color: #555;
+  max-width: 70%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 6%;
+  line-height: 1.5;
+  mark {
+    margin-right: 0.5rem;
+  }
+}
+
+.modalwindow {
+  color: #333;
+  line-height: 1.5;
+  font-weight: 600;
+  ul {
+    list-style: none;
+    text-align: left;
+    font-size: 1.7rem;
+  }
+  ul > li {
+    margin: 1.3rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .rule-text {
+    margin-left: 1rem;
+    font-weight: 400;
+  }
+}
+.show-modal {
+  font-size: 2rem;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+
+/* class implementation for modals */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
