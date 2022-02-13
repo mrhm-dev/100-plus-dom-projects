@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  min-height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  background-color: #00494d;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c5e4e7;
+}
+
+body .calc-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .calc-container .section-header {
+  letter-spacing: 1rem;
+  margin-bottom: 2rem;
+}
+
+body .calc-container .calculator {
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  body .calc-container .calculator {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+body .calc-container .calculator .operation-part {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+@media screen and (max-width: 720px) {
+  body .calc-container .calculator .operation-part {
+    width: 100%;
+  }
+}
+
+body .calc-container .calculator .operation-part .field {
+  margin: 8px 0;
+}
+
+body .calc-container .calculator .operation-part .field p {
+  margin-bottom: 4px;
+  color: #5e7a7d;
+  font-size: 0.9rem;
+}
+
+body .calc-container .calculator .operation-part .field .input-holder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 4px solid #f3f8fb;
+  background-color: #f3f8fb;
+  padding: 0 4px;
+}
+
+body .calc-container .calculator .operation-part .field .input-holder input {
+  text-align: right;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00494d;
+}
+
+body .calc-container .calculator .operation-part .field .tip-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+@media screen and (max-width: 720px) {
+  body .calc-container .calculator .operation-part .field .tip-field {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body .calc-container .calculator .operation-part .field .tip-field .tip-btn {
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  min-height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  background-color: #00494d;
+  cursor: pointer;
+}
+
+body .calc-container .calculator .operation-part .field .tip-field .tip-btn:hover, body .calc-container .calculator .operation-part .field .tip-field .tip-btn::selected {
+  background-color: red;
+}
+
+body .calc-container .calculator .operation-part .field .tip-field .custom-btn {
+  background-color: #f4fafa;
+  color: #7f9c9f;
+  border: 1px solid #7f9c9f;
+}
+
+body .calc-container .calculator .operation-part #custom-tip {
+  display: none;
+}
+
+body .calc-container .calculator .operation-part .custom-tip-field .input-holder {
+  display: flex;
+}
+
+body .calc-container .calculator .operation-part .custom-tip-field .input-holder button {
+  margin-left: 10px;
+}
+
+body .calc-container .calculator .result-part {
+  background-color: #00494d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  body .calc-container .calculator .result-part {
+    width: 100%;
+  }
+}
+
+body .calc-container .calculator .result-part .result-info .sub-result {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body .calc-container .calculator .result-part .result-info .sub-result .result-txt {
+  font-size: 1rem;
+}
+
+body .calc-container .calculator .result-part .result-info .sub-result .result-txt h1 {
+  font-size: 1rem;
+}
+
+body .calc-container .calculator .result-part .result-info .sub-result .result-txt p {
+  color: #7f9c9f;
+  font-size: 0.8rem;
+}
+
+body .calc-container .calculator .result-part .result-info .sub-result .result-number {
+  color: #26c0ab;
+}
+
+body .calc-container .calculator .result-part .result-btn {
+  width: 100%;
+}
+
+body .calc-container .calculator .result-part .result-btn button {
+  width: 100%;
+  background-color: #26c0ab;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
