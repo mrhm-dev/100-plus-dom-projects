@@ -40,9 +40,10 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- CSS Flexbox
 - CSS Grid
 - SCSS
+- Vanilla JS ( ES6 )
 
 ## Author
 
