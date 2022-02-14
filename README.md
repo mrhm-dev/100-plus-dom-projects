@@ -14,3 +14,5 @@ In this repository, you will find source codes, explanations, and other resource
 
    - 1 [100+ DOM Projects in Bangla | Welcome](https://youtu.be/QnfMLiS7_fo)
    - 2 [Generate RGB Color By Clicking](https://youtu.be/AVaLA-Tx18U)
+   - 3 [Generate Hexadecimal Color By Clicking](https://youtu.be/NiJ__DhD6-M)
+   - 4 [Copy Color Code By Clicking A Button](https://youtu.be/17nTHPPMIYo)
