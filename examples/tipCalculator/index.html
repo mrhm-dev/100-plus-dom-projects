@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <section class="calc-container">
+    <div class="section-header">
+      <h1 class="header">SPLI</h1>
+      <h1 class="header">TIER</h1>
+    </div>
+    <div class="calculator">
+      <div class="operation-part">
+        <div class="field">
+          <p>Bill</p>
+          <div class="input-holder">
+            <img src="images/icon-dollar.svg" alt="Dollar Icon">
+            <input type="text" name="total-bill" id="total-bill" />
+          </div>
+        </div>
+
+        <div class="field">
+          <p>Select Tip %</p>
+          <div class="tip-field">
+            <button class="tip-btn" onclick="calculateTips(5)">5%</button>
+            <button class="tip-btn" onclick="calculateTips(10)">10%</button>
+            <button class="tip-btn" onclick="calculateTips(15)">15%</button>
+            <button class="tip-btn" onclick="calculateTips(25)">25%</button>
+            <button class="tip-btn" onclick="calculateTips(50)">50%</button>
+            <button class="tip-btn custom-btn" onclick="enableCustomTip()">Custom</button>
+          </div>
+        </div>
+
+        <div class="field custom-tip-field" id="custom-tip">
+          <p>Input Custom Tip %</p>
+          <div class="input-holder">
+            <img src="images/icon-dollar.svg" alt="Dollar Icon">
+            <input type="text" name="total-bill" id="total-bill" oninput="calculateTips(this.value, 'custom')" />
+            <!-- <button type="submit" class="btn">Tip</button> -->
+          </div>
+        </div>
+
+        <div class="field">
+          <p>Numbers Of People</p>
+          <div class="input-holder">
+            <img src="images/icon-person.svg" alt="Person Icon">
+            <input type="text" name="people-number" id="people-number" />
+          </div>
+        </div>
+      </div>
+      <div class="result-part">
+        <div class="result-info">
+          <div class="sub-result">
+            <div class="result-txt">
+              <h1>Tip Ammount</h1>
+              <p>/ person</p>
+            </div>
+            <div class="result-number">
+              <h1 id="tip-per-person">$</h1>
+            </div>
+          </div>
+
+          <div class="sub-result">
+            <div class="result-txt">
+              <h1>Total</h1>
+              <p>/ person</p>
+            </div>
+            <div class="result-number">
+              <h1 id="total-per-person">$</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-btn">
+          <button type="reset" id="reset" onclick="resetCalculator()">Reset</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/shahriar-programmer/">Shahriar Ahmed Shovon</a>.
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
