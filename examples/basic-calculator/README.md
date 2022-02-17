@@ -20,15 +20,15 @@ In the first input field you need to put the first integer number. Then you need
 
 ## Requirements
 
-- The main requirement of this project is a laptop or PC
-- Then you need a web browser like Google Chrome, Mozilla Firefox or Safari etc.
-- You can use any code editors like VS Code, Sublime Text, Atom etc.
-- You need the basic knowledge on HTML, & CSS
+1. The main requirement of this project is a laptop or PC
+2. Then you need a web browser like Google Chrome, Mozilla Firefox or Safari etc.
+3. You can use any code editors like VS Code, Sublime Text, Atom etc.
+4. You need the basic knowledge on HTML, & CSS
 
 ## Future Upgrade
 
-- UI design will be upgraded
-- Error handling will be added
-- Will work on number conversion
+1. UI design will be upgraded
+2. Error handling will be added
+3. Will work on number conversion
 
 Happy Coding✌️
