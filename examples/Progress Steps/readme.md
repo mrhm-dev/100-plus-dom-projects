@@ -1,3 +1,5 @@
+![projectOverview](./dist/projectSnapshot.png)
+
 # Toggle this [project](https://progressstepsproject.netlify.app/)
 
 # Highlights:
