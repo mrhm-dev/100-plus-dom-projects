@@ -1,6 +1,6 @@
 ![project-Image](./dist/assets/projectSnapshot.png)
 
-# Check out this project [here 👈](https://feasiblecomponent-faq.netlify.app/)
+# Check out this project [here 👈](https://feasiblecomponents-faq.netlify.app/)
 
 ## Little optimization :
 
