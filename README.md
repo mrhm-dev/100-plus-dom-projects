@@ -16,3 +16,6 @@ In this repository, you will find source codes, explanations, and other resource
    - 2 [Generate RGB Color By Clicking](https://youtu.be/AVaLA-Tx18U)
    - 3 [Generate Hexadecimal Color By Clicking](https://youtu.be/NiJ__DhD6-M)
    - 4 [Copy Color Code By Clicking A Button](https://youtu.be/17nTHPPMIYo)
+   - 5 [Generate A Dynamic Toast Message](https://youtu.be/8Oar5u4RHXk)
+   - 6 [Type Hex Code To Change The Background Color](https://youtu.be/NLVLkjd0Yh4)
+   - 7 [Transform User Input](https://youtu.be/ws4-9mzLyfI)
