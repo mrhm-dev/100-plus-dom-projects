@@ -19,3 +19,8 @@ In this repository, you will find source codes, explanations, and other resource
    - 5 [Generate A Dynamic Toast Message](https://youtu.be/8Oar5u4RHXk)
    - 6 [Type Hex Code To Change The Background Color](https://youtu.be/NLVLkjd0Yh4)
    - 7 [Transform User Input](https://youtu.be/ws4-9mzLyfI)
+   - 8 [Working with Both Hexadecimal and RGB Color Code](https://youtu.be/8hcGDnAredM)
+   - 9 [Refactoring The Project From Scratch](https://youtu.be/fIRatpEFo8o)
+   - 10 [Structuring The Project For New UI & Functional Requirements(part-1)](https://youtu.be/9TPpp3_Ni80)
+   - 11 [Structure & Refactor JS Code For New Requirements(part-2)](https://youtu.be/QHTTTuVYFSk)
+   - 12 [Convert Hex Code To Decimal for Color Picker Slider(part-3) ](https://youtu.be/GAOmWKfGE8Y)
