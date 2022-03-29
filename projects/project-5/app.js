@@ -30,12 +30,12 @@ function main() {
 	});
 
 	copyBtn.addEventListener('click', function () {
-		navigator.clipboard.writeText(output.value);
 		if (div !== null) {
 			div.remove();
 			div = null;
 		}
 		if (isValidHex(output.value)) {
+			navigator.clipboard.writeText(output.value);
 			generateToastMessage(`${output.value} copied`);
 		} else {
 			alert('Invalid Color Code');
