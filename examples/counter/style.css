@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+}
+.minus-btn {
+  width: 45px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.input-area {
+  width: 100px;
+  text-align: center;
+  font-size: 38px;
+  color: salmon;
+  outline: none;
+  border: none;
+  font-weight: 500;
+}
+.plus-btn {
+  width: 45px;
+  margin-left: 15px;
+  cursor: pointer;
+}

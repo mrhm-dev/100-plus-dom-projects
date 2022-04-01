@@ -1,0 +1,11 @@
+{
+  "name": "counter",
+  "version": "1.0.0",
+  "description": "From this project we can increment and decrement number by clicking two buttons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khaled Md. Saifullah",
+  "license": "ISC"
+}
