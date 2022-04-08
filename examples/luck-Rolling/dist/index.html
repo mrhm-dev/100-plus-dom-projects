@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="dice, rollthedice, dicerolling,luck," />
+    <meta
+      name="description"
+      content="challenge your opponent dice role challenge on your luck."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.min.css" />
+    <link rel="icon" type="image/svg" href="./assets/icons/dice-icon.svg" />
+    <title>Dice Rolling</title>
+  </head>
+  <body>
+    <header>
+      <section class="modalwindow">
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h1>All You Need For This Gameplay 🎲🎲</h1>
+          <ul>
+            <li>
+              <mark>Who wins:</mark>
+              <span class="rule-text">
+                The first one who meets 100 or above points he/she will be the
+                winner.🥇
+              </span>
+            </li>
+            <li>
+              <mark>When Swap:</mark>
+              <span class="rule-text">
+                While your rolling dice value will be 1 ,our program swap the
+                player.😥
+              </span>
+            </li>
+            <li>
+              <mark>Hold:</mark>
+              <span class="rule-text">
+                When satisfied with your current points, click hold to add
+                current points to the final score.🚨
+              </span>
+            </li>
+            <li>
+              <mark>New&nbsp;Game:</mark>
+              <span class="rule-text">
+                A game must contain win & lose. To play again, click New Game.
+                hope for the luck to looser on behalf of us.🎯
+              </span>
+            </li>
+          </ul>
+          <p class="notable">
+            <mark>N.B :</mark>Having said all, don't worry, we arranged a fair
+            game for you. our program automates the tossing process and swaps
+            between players. and make sure your screen resolution up to 1150px
+            [laptop/pc] recommended.
+          </p>
+        </div>
+        <div class="overlay hidden"></div>
+      </section>
+      <button class="help-icon show-modal">
+        <img src="./assets/icons/gethelp-icon.svg" alt="help-icon" />
+      </button>
+    </header>
+    <!-- main section -->
+    <main>
+      <div class="container">
+        <div class="container-player">
+          <div class="header">
+            <h2 class="player-name">
+              <span contenteditable>Player - 1</span>
+              <i class="fas fa-user"></i>
+            </h2>
+          </div>
+          <div class="content-record player-one">
+            <div class="final-score">0</div>
+            <div class="score-card">
+              <div class="title">CURRENT</div>
+              <div class="current-score">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="container-menu">
+          <button class="reset-game">
+            <span class="btn-icon"
+              ><img src="./assets/icons/newgame-icon.svg" alt="new game icon"
+            /></span>
+            NEW GAME
+          </button>
+          <div>
+            <img
+              class="dice-img flicker"
+              src="./assets/dices/default.jpg"
+              alt="dice"
+            />
+          </div>
+          <button class="roll-dice">
+            <span class="btn-icon"
+              ><img src="./assets/icons/dice-icon.svg" alt="dice icon" /></span
+            >ROLL DICE
+          </button>
+          <button class="hold">
+            <span class="btn-icon"
+              ><img src="./assets/icons/hold-icon.svg" alt="hold-icon" /></span
+            >HOLD
+          </button>
+        </div>
+        <div class="container-player">
+          <div class="header">
+            <h2 class="player-name">
+              <span contenteditable>Player - 2</span>
+              <i class="fas fa-user"></i>
+            </h2>
+          </div>
+          <div class="content-record player-two">
+            <div class="final-score">0</div>
+            <div class="score-card">
+              <div class="title">CURRENT</div>
+              <div class="current-score">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer section -->
+    <footer>
+      <div class="footer-icons">
+        <a
+          class="iconNtext"
+          href="https://www.linkedin.com/in/jorjis-hasan-4163a81a4/"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <i style="color: #eba495" class="icon fab fa-linkedin fa-2x"></i>
+          <span class="text">linkedin</span>
+        </a>
+
+        <a
+          class="iconNtext"
+          href="https://codepen.io/jorjis"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <i style="color: #fff" class="icon fab fa-codepen fa-2x"></i>
+          <span class="text">codepen</span>
+        </a>
+        <a
+          class="iconNtext"
+          href="https://www.hackerrank.com/_jorjis"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <i style="color: #1ba94c" class="icon fab fa-hackerrank fa-2x"></i>
+          <span class="text">hackerrank</span>
+        </a>
+
+        <a
+          class="iconNtext"
+          href="https://github.com/jorjis212"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <i style="color: #fff" class="icon fab fa-github fa-2x"></i>
+          <span class="text">github</span>
+        </a>
+      </div>
+      <div class="footer-text">
+        Made from
+        <span class="fp"
+          ><img src="./assets/icons/heart.svg" alt="heart"
+        /></span>
+        by jorjis, 2019-2022.
+      </div>
+    </footer>
+
+    <script src="./scripts/app.179.js"></script>
+  </body>
+</html>

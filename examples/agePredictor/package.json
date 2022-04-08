@@ -1,0 +1,27 @@
+{
+  "name": "guessProject",
+  "version": "1.0.0",
+  "description": "![project Overview,](/dist/images/minimalisticMoc@HD.png)",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/js && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorjis212/agePredictor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorjis212/agePredictor/issues"
+  },
+  "homepage": "https://github.com/jorjis212/agePredictor#readme",
+  "devDependencies": {
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}

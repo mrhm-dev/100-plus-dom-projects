@@ -1,0 +1,13 @@
+#button {
+    background: #0CDFF7;
+}
+#button:hover {
+    background: pink;
+}
+h1 {
+    color: red;
+}
+p {
+    font-size: 22px;
+    color: hotpink;
+}

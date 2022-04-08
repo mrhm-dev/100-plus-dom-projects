@@ -1,0 +1,115 @@
+@import "reset";
+
+//colors
+$color-primary: #4e51bf;
+$color-secondary: #24252a;
+$color-white: #fff;
+
+//typograph
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "extrabold": 800,
+);
+
+body {
+  padding: 2rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.btn-faq {
+  @extend .btn;
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  border: 1.5px solid $color-secondary;
+  font-size: 2.2rem;
+  color: $color-primary;
+  font-weight: map-get($font-weights, semibold);
+  background-color: $color-white;
+  transition: all 200ms ease-in;
+  &:hover {
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+}
+.faq {
+  &__title {
+    font-size: 3.8rem;
+    color: $color-secondary;
+    margin-bottom: 7rem;
+  }
+  &__content {
+    margin: 0 auto;
+    &__element {
+      border-bottom: 1px solid $color-secondary;
+      &__header {
+        user-select: none;
+        -webkit-user-select: none;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        &__title {
+          font-size: clamp(2.4rem, 2.6vw, 3rem);
+          font-weight: map-get($font-weights, medium);
+          color: $color-primary;
+          white-space: nowrap;
+        }
+      }
+      &__body {
+        font-size: 1.8rem;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.footer {
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  .mention {
+    color: $color-primary;
+    font-weight: map-get($font-weights, medium);
+    cursor: pointer;
+  }
+}
+
+.faq-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+@media (min-width: 768px) {
+  .faq {
+    &__content {
+      max-width: 70%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq {
+    &__content {
+      max-width: 60%;
+    }
+  }
+}
+
+//functional class
+.faq__content__element__body {
+  opacity: 0;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 200ms;
+}
+.expan .faq__content__element__body {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100vh;
+  margin: 2rem 0;
+}

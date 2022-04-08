@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg-color: #ff7f50;
+  --progress-placeoverlay: #3498db28;
+  --primary-color: #3498db;
+  --accent-red: #e10600;
+  --white-text: #fff;
+  --light-black: #444;
+}
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-size: 1.6rem;
+  font-family: "Mulish", sans-serif;
+  background-color: var(--bg-color);
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  width: 350px;
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.progress-container::after {
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 4px;
+  width: 100%; /* todo */
+  position: absolute;
+  background-color: var(--progress-placeoverlay);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.progress {
+  left: 0;
+  top: 50%;
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  background-color: var(--primary-color);
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: width 500ms ease-in;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px;
+  background-color: var(--white-text);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  transition: 500ms ease-in;
+}
+
+.circle.active {
+  background: var(--primary-color);
+  color: var(--white-text);
+}
+#prev {
+  background-color: var(--white-text);
+  color: var(--light-black);
+}
+#next {
+  background-color: var(--primary-color);
+  color: var(--white-text);
+  border-color: var(--primary-color);
+}
+.btn {
+  outline: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 0.6rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 100ms ease-in;
+  border: 1.3px solid var(--white-text);
+}
+.btn:last-child {
+  margin-left: 1rem;
+}
+
+.btn:active {
+  transform: translateY(1.5px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  border: 1.3px solid var(--accent-red);
+  box-shadow: none;
+}

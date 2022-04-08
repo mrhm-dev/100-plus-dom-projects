@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(212, 246, 239);
+}
+.main-heading {
+  color: blueviolet;
+  text-align: center;
+  margin: 40px 0px;
+  font-size: 40px;
+}
+
+.container {
+  width: 100%;
+}
+.input-field {
+  width: 40%;
+  float: left;
+  padding: 10px;
+  margin-left: 35px;
+}
+.input-text {
+  width: 390px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+}
+.convert-btn {
+  background-color: rgb(150, 69, 243);
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.convert-to {
+  font-size: large;
+  color: rgb(255, 239, 14);
+}
+.show-result {
+  width: 40%;
+  float: left;
+  padding: 10px;
+  margin-left: 35px;
+  display: none;
+}
+.output-text {
+  font-size: 28px;
+  color: rgb(243, 69, 127);
+  font-weight: 600;
+}

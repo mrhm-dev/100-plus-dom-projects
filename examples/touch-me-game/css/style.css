@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+body .container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  text-align: center;
+}
+
+body .container .game-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+body .container .game-info h1 {
+  font-size: 3rem;
+  display: flex;
+}
+
+body .container .game-info h1 span {
+  font-size: 0.8rem;
+}
+
+body .container .game-info .play-btn {
+  margin: 1rem 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+  background-color: green;
+  padding: 10px 40px;
+  transition: all 0.3s;
+}
+
+body .container .game-info .play-btn:hover {
+  transform: scale(1.1);
+}
+
+body .container .game-info .credit-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-self: flex-end;
+  border: 1px solid white;
+}
+
+body .container .game-info .credit-info .credit-h1 {
+  font-size: 1.4rem;
+}
+
+body .container .game-info .credit-info p {
+  font-size: 0.9rem;
+}
+
+body .container .game-info .credit-info p a {
+  color: white;
+}
+
+body .container .touch-me-div {
+  display: none;
+  position: absolute;
+  padding: 2px;
+}
+
+body .container .touch-me-div .touch-me-img {
+  width: 240px;
+}
+
+body .container .stop-game-div {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+body .container .stop-game-div .stop-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  background-color: red;
+  padding: 6px 30px;
+  transition: all 0.3s;
+}
+
+body .container .stop-game-div .stop-btn:hover {
+  transform: scale(1.1);
+}

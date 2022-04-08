@@ -1,0 +1,255 @@
+@import "./reset";
+@import "./animation";
+@import "./modalwindow";
+//colors
+$primary-color: #354e8b;
+$secondary-color: #62a8dc;
+$success-color: #69f0ae;
+$text-color: #fff;
+
+//typograph
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+$font-lato: "Lato", sans-serif;
+
+//btn styling
+.btn {
+  font-family: $font-lato;
+  display: block;
+  border: 0;
+  outline: 0;
+  background-color: $text-color;
+  background-color: darken($text-color, 10%);
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.29);
+}
+
+.help-icon {
+  @extend .btn;
+  padding: 0;
+  border-radius: 50%;
+}
+.btn-icon > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+body {
+  font-family: $font-lato;
+  font-weight: map-get($font-weights, regular);
+  background-color: $secondary-color;
+  background-color: $primary-color;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: $text-color;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+main {
+  align-self: start;
+}
+
+.container {
+  margin: 0 auto;
+  // margin-top: 4rem;
+  width: 1140px;
+  height: 456px;
+  background-color: $primary-color;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.container-player {
+  .header {
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 2px solid $text-color;
+    .player-name {
+      padding: 1.5rem 0;
+    }
+    .player-name > span[contenteditable] {
+      margin-right: 1rem;
+    }
+  }
+  .content-record {
+    background-image: url("../assets/backgrounds/primary-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 370px;
+    display: grid;
+    place-items: center;
+    transition: background-image 0.5s ease-in;
+  }
+  .final-score {
+    font-size: 5rem;
+    margin-top: 1.5rem;
+  }
+  .score-card {
+    margin: 0 auto;
+    width: 200px;
+    background: $secondary-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-size: 2.8rem;
+      padding: 1rem;
+    }
+    .current-score {
+      font-size: 3.5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: calc(20% + 2rem);
+
+  .dice-img {
+    width: 100px;
+    height: 100px;
+    margin: 3rem 0;
+  }
+  .reset-game {
+    @extend .btn;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+  .roll-dice {
+    @extend .btn;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .hold {
+    @extend .btn;
+    font-size: 1.6rem;
+  }
+}
+//footer styling
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+  &:hover {
+    color: $success-color;
+  }
+}
+
+footer {
+  .footer-icons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    .iconNtext {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2%;
+      letter-spacing: 0px;
+      transition: all 0.2s ease-in;
+      color: $text-color;
+
+      .icon {
+        transition: all 0.2s ease-in;
+      }
+
+      &:hover .icon {
+        transform: translateY(-10%);
+      }
+      &:hover .text {
+        color: $success-color;
+      }
+      .text {
+        transition: all 0.2s ease-in;
+        font-size: 1.5rem;
+      }
+    }
+    .iconNtext:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
+  .footer-text {
+    margin-top: 1.5rem;
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    .fp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      margin: 0 0.2rem;
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+
+//functional class selector
+.active {
+  .content-record {
+    background-image: url("../assets/backgrounds/accent-background.svg");
+  }
+  i {
+    color: $success-color;
+  }
+}
+
+.winner {
+  .content-record {
+    background-image: url("../assets/backgrounds/success-background.svg");
+  }
+}
+
+.winner .player-name {
+  position: relative;
+  &::after {
+    content: "-winner";
+    margin-left: 1rem;
+    display: inline-block;
+    -webkit-text-stroke: 0.19px $text-color;
+    font-weight: map-get($font-weights, bold);
+    color: $primary-color;
+    font-size: clamp(2.5rem, 2.1vw, 3rem);
+    letter-spacing: -0.5px;
+    animation: 1s pulsate infinite;
+    position: absolute;
+    bottom: 0;
+  }
+  &::before {
+    content: "🏅";
+  }
+}
+
+@keyframes pulsate {
+  50% {
+    color: $success-color;
+  }
+}
