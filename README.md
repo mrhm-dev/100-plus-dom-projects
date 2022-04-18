@@ -26,3 +26,5 @@ In this repository, you will find source codes, explanations, and other resource
    - 10 [Structuring The Project For New UI & Functional Requirements(part-1)](https://youtu.be/9TPpp3_Ni80)
    - 11 [Structure & Refactor JS Code For New Requirements(part-2)](https://youtu.be/QHTTTuVYFSk)
    - 12 [Convert Hex Code To Decimal for Color Picker Slider(part-3) ](https://youtu.be/GAOmWKfGE8Y)
+   - 13 [Set Up A Background Preference Feature Into The Project](https://youtu.be/gTLaDz0_b2I)
+   - 14 [Implement Remove Background Preference Feature Into The Project](https://youtu.be/-pGIxBZIKlU)
