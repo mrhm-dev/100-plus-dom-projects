@@ -1,0 +1,76 @@
+
+
+body {
+      background: #ddd;
+  }
+/* Theme section CSS */
+
+/* darktheme */
+.dark{
+      background-color: #2d2d2d !important;
+}
+
+.dark .card.container-fluid{
+      background-color: #484b4e !important;
+      color: white !important;
+      border: 1px solid #ddd;
+}
+.dark .card-body{
+      background-color: #484b4e !important;
+      color: white !important;
+      
+}
+.dark button.btn.btn-outline-primary.my-2.my-sm-0{
+      color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.dark button.btn.btn-outline-primary.my-2.my-sm-0:hover{
+      color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.dark h5.card-title.text-capitalize.text-center{
+      color: rgb(224, 223, 223);
+}
+/* light theme */
+.light{
+      background:white !important;
+}
+ .light nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+      background-color: #f8f9fa !important;
+     border-bottom: 1px solid #ddd;
+} 
+.light a.navbar-brand{
+      color: rgba(0, 0, 0, 0.9);
+}
+.light a#navbarDropdown{
+      color: rgba(0, 0, 0, 0.5);
+}
+
+
+.light button#addNoteBtn{
+      color: #28a745 !important; 
+      border-color: #28a745 !important;
+      background: white !important;
+}
+.light button#addNoteBtn:hover{
+      color: #fff !important;
+      background-color: #28a745 !important;
+      border-color: #28a745 !important;
+}
+.light button.btn.btn-danger.text-capitalize{
+      color: #dc3545;
+      border-color: #dc3545;
+      background: white;
+}
+
+
+.light button.btn.btn-danger.text-capitalize:hover{
+      color: #fff;
+      background-color: #dc3545;
+      border-color: #dc3545;
+}
+.light .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus{
+      color:rgba(0, 0, 0, 0.9)!important ;
+}
