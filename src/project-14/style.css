@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap");
 *,
 *::before,
 *::after {
@@ -6,16 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 16px;
   background-color: #dddeee;
   max-width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  min-height: 100vh;
 }
+
 .container {
   width: 600px;
   margin: 2rem auto;
@@ -24,15 +22,18 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 }
+
 /* section */
 .section {
   margin-bottom: 2rem;
 }
+
 .section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .section-header-action {
   display: inline-block;
   border: none;
@@ -44,17 +45,25 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+
+.section-header-action-group {
+  display: flex;
+  gap: 1rem;
+}
+
 .section-title {
   font-size: 18px;
   font-weight: 600;
   color: #333333;
 }
+
 .divider {
   width: 100%;
   height: 1px;
   margin-top: 0.3rem;
   background-color: #dddeee;
 }
+
 /* color display */
 .color-display {
   width: 100%;
@@ -64,6 +73,7 @@ body {
   border-radius: 0.15rem;
   background-color: #dddeee;
 }
+
 /* select copy mode section */
 .select-copy-mode {
   display: flex;
@@ -72,34 +82,12 @@ body {
   margin-top: 1rem;
   gap: 1rem;
 }
+
 .mode-radio-group {
   display: flex;
   gap: 1rem;
 }
-/* color display */
-.color-display {
-  width: 100%;
-  height: 8rem;
-  margin-top: 1rem;
-  border: 1px solid #dddeee;
-  border-radius: 0.15rem;
-  background-color: #dddeee;
-}
-/* select copy mode section */
-.select-copy-mode {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-.mode-radio-group {
-  display: flex;
-  gap: 1rem;
-}
-label {
-  user-select: none;
-}
+
 /* selected color code */
 .selected-color-code {
   display: grid;
@@ -107,13 +95,16 @@ label {
   gap: 1rem;
   margin-top: 1rem;
 }
+
 /* color sliders */
 .color-sliders {
   margin-top: 2rem;
 }
+
 .hex-input-group {
   position: relative;
 }
+
 .hex-icon {
   position: absolute;
   top: 47%;
@@ -123,10 +114,11 @@ label {
   border-top-left-radius: 0.15rem;
   border-bottom-left-radius: 0.15rem;
 }
+
 .hex-input {
-  text-transform: uppercase;
   padding-left: 3rem !important;
 }
+
 /* color sliders */
 .color-sliders-group {
   margin-top: 0.5rem;
@@ -134,14 +126,16 @@ label {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
+
 .color-slider {
   width: 100%;
   height: 25px;
   border-radius: 0.25rem;
   opacity: 0.7;
   -webkit-transition: 0.2s;
-  transition: opacity 0.25;
+  transition: opacity 0.2s;
 }
+
 .slider-label-group {
   display: flex;
   justify-content: space-between;
@@ -151,9 +145,10 @@ label {
   color: #555555;
   margin-top: 1rem;
 }
+
 /* text-input */
 .text-input,
-text-input:disabled {
+.text-input:disabled {
   width: 100%;
   background: transparent;
   outline: none;
@@ -166,6 +161,7 @@ text-input:disabled {
 .text-input:focus {
   border: 1px solid #ff6733;
 }
+
 .lead {
   font-weight: 600;
   font-size: 0.9rem;
@@ -173,6 +169,11 @@ text-input:disabled {
   display: block;
   user-select: none;
 }
+
+label {
+  user-select: none;
+}
+
 .toast-message {
   position: fixed;
   z-index: 999;
@@ -217,7 +218,7 @@ text-input:disabled {
   }
 }
 
-/* color-boxes */
+/* color boxes */
 .preset-colors {
   display: flex;
   flex-wrap: wrap;
@@ -233,21 +234,24 @@ text-input:disabled {
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .color-box:hover {
   opacity: 0.9;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Background Preferences  */
-
+/* background preferences */
 .background-preferences {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+
 .background-left-panel {
   padding: 1rem;
+  width: 100%;
 }
+
 .background-image {
   width: 100%;
   padding-top: 56.25%;
@@ -258,14 +262,17 @@ text-input:disabled {
   background-size: 100% 100% !important;
   background-position: bottom !important;
 }
+
 .background-control {
   margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
 }
+
 .file-input {
   display: none;
 }
+
 .background-control-btn {
   padding: 0.5rem 1rem;
   border: none;

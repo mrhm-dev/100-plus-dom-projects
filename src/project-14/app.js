@@ -1,11 +1,11 @@
 /**
- * Author: Tanzil Islam
- * created-Date: 08-03-2022
- * Description: Color Picker Application
+ * Date: 16-12-2021
+ * Author: HM Nayem
+ * Description: Color picker application with huge dom functionalities
  */
 
 // Globals
-let toastMessageContainer = null;
+let toastContainer = null;
 const defaultColor = {
   red: 221,
   green: 222,
@@ -39,18 +39,14 @@ const defaultPresetColors = [
 ];
 let customColors = new Array(24);
 const copySound = new Audio("./copy-sound.wav");
+
 // onload handler
 window.onload = () => {
   main();
   updateColorCodeToDom(defaultColor);
-  // display color presets
-  displayColorBoxes(
-    document.getElementById("preset-colors"),
-    defaultPresetColors
-  );
-  // display previous saved preset colors
+  // display preset colors
+  displayColorBoxes(document.getElementById("preset-colors"), defaultPresetColors);
   const customColorsString = localStorage.getItem("custom-colors");
-
   if (customColorsString) {
     customColors = JSON.parse(customColorsString);
     displayColorBoxes(document.getElementById("custom-colors"), customColors);
@@ -60,9 +56,7 @@ window.onload = () => {
 // main or boot function, this function will take care of getting all the DOM references
 function main() {
   // Dom References
-  const generateRandomColorBtn = document.getElementById(
-    "generate-random-color"
-  );
+  const generateRandomColorBtn = document.getElementById("generate-random-color");
   const colorModeHexInp = document.getElementById("input-hex");
   const colorSliderRed = document.getElementById("color-slider-red");
   const colorSliderGreen = document.getElementById("color-slider-green");
@@ -77,31 +71,16 @@ function main() {
   const bgFileDeleteBtn = document.getElementById("bg-file-delete-btn");
   bgFileDeleteBtn.style.display = "none";
   // event listeners
-  generateRandomColorBtn.addEventListener(
-    "click",
-    handleGenerateRandomColorBtn
-  );
-  colorSliderRed.addEventListener(
-    "change",
-    handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue)
-  );
-  colorSliderGreen.addEventListener(
-    "change",
-    handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue)
-  );
-  colorSliderBlue.addEventListener(
-    "change",
-    handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue)
-  );
+  generateRandomColorBtn.addEventListener("click", handleGenerateRandomColorBtn);
+  colorSliderRed.addEventListener("change", handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue));
+  colorSliderGreen.addEventListener("change", handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue));
+  colorSliderBlue.addEventListener("change", handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue));
   copyToClipboardButton.addEventListener("click", handleCopyToClipboard);
   presetColorsParent.addEventListener("click", handlePresetColorsParent);
   customColorsParent.addEventListener("click", handlePresetColorsParent);
   // changing color via hex color input field
   colorModeHexInp.addEventListener("keyup", handleColorModeHexInput);
-  saveToCustomBtn.addEventListener(
-    "click",
-    handleSaveToCustomBtn(customColorsParent, colorModeHexInp)
-  );
+  saveToCustomBtn.addEventListener("click", handleSaveToCustomBtn(customColorsParent, colorModeHexInp));
   bgFileInputBtn.addEventListener("click", function () {
     bgFileInput.click();
   });
@@ -117,7 +96,7 @@ function main() {
     bgPreview.style.background = `none`;
     document.body.style.background = `none`;
     bgPreview.style.backgroundColor = `#DDDEEE`;
-    document.body.style.backgroundColor = `#DDDEEE`;
+    document.body.style.backgroundColor = "#dddeee";
     bgFileDeleteBtn.style.display = "none";
     bgFileInput.value = null;
   });
@@ -128,16 +107,19 @@ function handleGenerateRandomColorBtn() {
   const color = generateColorDecimal();
   updateColorCodeToDom(color);
 }
-function handleColorModeHexInput(e) {
+
+function handleColorModeHexInp(e) {
   const hexColor = e.target.value;
   if (hexColor) {
+    this.value = hexColor.toUpperCase();
     if (isValidHex(hexColor)) {
-      const color = hexToDecimalColor(hexColor);
+      const color = hexToDecimalColors(hexColor);
       updateColorCodeToDom(color);
     }
   }
 }
-function handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue) {
+
+function handleColorSliders(colorSliderRed, colorSliderGreen, colorSliderBlue) {
   return function () {
     const color = {
       red: parseInt(colorSliderRed.value),
@@ -147,49 +129,52 @@ function handleColorSlider(colorSliderRed, colorSliderGreen, colorSliderBlue) {
     updateColorCodeToDom(color);
   };
 }
+
 function handleCopyToClipboard() {
   const colorModeRadios = document.getElementsByName("color-mode");
-
   const mode = getCheckedValueFromRadios(colorModeRadios);
-  if (toastMessageContainer !== null) {
-    removeToastMessage();
+  if (mode === null) {
+    throw new Error("Invalid Radio Input");
   }
-  if (mode == null) {
-    throw new Error("Invalid color mode radio input");
-  } else if (mode == "hex") {
-    const hexValue = document.getElementById("input-hex").value;
-    if (hexValue && isValidHex(hexValue)) {
-      navigator.clipboard.writeText(`#${hexValue}`);
-      generateToastMessage(`#${hexValue} Copied`);
+
+  if (toastContainer !== null) {
+    toastContainer.remove();
+    toastContainer = null;
+  }
+
+  if (mode === "hex") {
+    const hexColor = document.getElementById("input-hex").value;
+    if (hexColor && isValidHex(hexColor)) {
+      navigator.clipboard.writeText(`#${hexColor}`);
+      generateToastMessage(`#${hexColor} Copied`);
     } else {
-      alert("Invalid Hex Code!, Unable to copy");
+      alert("Invalid Hex Code");
     }
-  } else if (mode == "rgb") {
-    const rgbValue = document.getElementById("input-rgb").value;
-    if (rgbValue) {
-      navigator.clipboard.writeText(`${rgbValue}`);
-      generateToastMessage(`${rgbValue} Copied`);
+  } else {
+    const rgbColor = document.getElementById("input-rgb").value;
+    if (rgbColor) {
+      navigator.clipboard.writeText(rgbColor);
+      generateToastMessage(`${rgbColor} Copied`);
     } else {
-      alert("Invalid Hex Code!, Unable to copy");
+      alert("Invalid RGB Color");
     }
   }
 }
+
 function handlePresetColorsParent(event) {
   const child = event.target;
   if (child.className === "color-box") {
     navigator.clipboard.writeText(child.getAttribute("data-color"));
-    generateToastMessage(
-      `${child.getAttribute("data-color")} copied to clipboard`
-    );
-    copySound.volume = 0.3;
+    copySound.volume = 0.2;
     copySound.play();
   }
 }
-function handleSaveToCustomBtn(customColorsParent, colorModeHexInp) {
+
+function handleSaveToCustomBtn(customColorsParent, inputHex) {
   return function () {
-    const color = `#${colorModeHexInp.value}`;
+    const color = `#${inputHex.value}`;
     if (customColors.includes(color)) {
-      alert("The color has been  already Saved");
+      alert("Already Saved");
       return;
     }
     customColors.unshift(color);
@@ -201,38 +186,34 @@ function handleSaveToCustomBtn(customColorsParent, colorModeHexInp) {
     displayColorBoxes(customColorsParent, customColors);
   };
 }
+
 // DOM functions
 /**
- * Remove already generated toast message
- */
-function removeToastMessage() {
-  toastMessageContainer.classList.remove("toast-message-slide-in");
-  toastMessageContainer.classList.add("toast-message-slide-out");
-
-  toastMessageContainer.addEventListener("animationend", function () {
-    toastMessageContainer.remove();
-    toastMessageContainer = null;
-  });
-}
-/**
- * Generate and display a Toast Message
+ * Generate a dynamic DOM element to show a toast message
  * @param {string} msg
  */
 function generateToastMessage(msg) {
-  toastMessageContainer = document.createElement("div");
-  toastMessageContainer.innerText = msg;
-  toastMessageContainer.className = "toast-message toast-message-slide-in";
+  toastContainer = document.createElement("div");
+  toastContainer.innerText = msg;
+  toastContainer.className = "toast-message toast-message-slide-in";
 
-  toastMessageContainer.addEventListener("click", removeToastMessage);
-  document.body.appendChild(toastMessageContainer);
-  setTimeout(() => {
-    removeToastMessage();
-  }, 2000);
+  toastContainer.addEventListener("click", function () {
+    toastContainer.classList.remove("toast-message-slide-in");
+    toastContainer.classList.add("toast-message-slide-out");
+
+    toastContainer.addEventListener("animationend", function () {
+      toastContainer.remove();
+      toastContainer = null;
+    });
+  });
+
+  document.body.appendChild(toastContainer);
 }
+
 /**
- * find the check elements from a list of radio buttons
+ * find the checked elements from a list of radio buttons
  * @param {Array} nodes
- * @returns {String | null}
+ * @returns {string | null}
  */
 function getCheckedValueFromRadios(nodes) {
   let checkedValue = null;
@@ -244,17 +225,17 @@ function getCheckedValueFromRadios(nodes) {
   }
   return checkedValue;
 }
-/**
- *  Update dom elements with calculated color values
- * @param {object} color
- */
 
+/**
+ * update dom elements with calculated color values
+ * @param {object} color : ;
+ */
 function updateColorCodeToDom(color) {
   const hexColor = generateHexColor(color);
   const rgbColor = generateRGBColor(color);
 
-  document.getElementById("color-display").style.backgroundColor = hexColor;
-  document.getElementById("input-hex").value = hexColor.slice(1);
+  document.getElementById("color-display").style.backgroundColor = `#${hexColor}`;
+  document.getElementById("input-hex").value = hexColor;
   document.getElementById("input-rgb").value = rgbColor;
   document.getElementById("color-slider-red").value = color.red;
   document.getElementById("color-slider-red-label").innerText = color.red;
@@ -263,9 +244,10 @@ function updateColorCodeToDom(color) {
   document.getElementById("color-slider-blue").value = color.blue;
   document.getElementById("color-slider-blue-label").innerText = color.blue;
 }
+
 /**
- * generate div with class name color-box
- * @param {String} color
+ * create a div element with class name color-box
+ * @param {string} color : ;
  * @returns {object}
  */
 function generateColorBox(color) {
@@ -273,38 +255,41 @@ function generateColorBox(color) {
   div.className = "color-box";
   div.style.backgroundColor = color;
   div.setAttribute("data-color", color);
+
   return div;
 }
-/**
- * Remove all children from a parent node
- * @param {Object} parentNode
- */
-function removeChildren(parentNode) {
-  let child = parentNode.lastElementChild;
 
-  while (child) {
-    parentNode.removeChild(child);
-    child = parentNode.lastElementChild;
-  }
-}
 /**
- * this function will create and append new color boxes to it's parent element
- * @param {Object} parent
+ * this function will create and append new color boxes to it's parent
+ * @param {object} parent
  * @param {Array} colors
  */
 function displayColorBoxes(parent, colors) {
   colors.forEach((color) => {
-    if (!color) return;
-    if (!isValidHex(color.slice(1))) return;
-    const colorBox = generateColorBox(color);
-    parent.appendChild(colorBox);
+    if (color && isValidHex(color.slice(1))) {
+      const colorBox = generateColorBox(color);
+      parent.appendChild(colorBox);
+    }
   });
 }
-// util functions
 
 /**
- * Generate and return an object of three color decimal values
- * @returns {object}
+ * remove all children from parent
+ * @param {object} parent
+ */
+function removeChildren(parent) {
+  let child = parent.lastElementChild;
+  while (child) {
+    parent.removeChild(child);
+    child = parent.lastElementChild;
+  }
+}
+
+// Utils
+
+/**
+ * generate and return an object of three color decimal values
+ * @returns {object}}
  */
 function generateColorDecimal() {
   const red = Math.floor(Math.random() * 255);
@@ -319,7 +304,7 @@ function generateColorDecimal() {
 }
 
 /**
- * take a color object of three values and return hexadecimal color code
+ * take a color object of three decimal values and return a hexadecimal color code
  * @param {object} color
  * @returns {string}
  */
@@ -329,28 +314,28 @@ function generateHexColor({ red, green, blue }) {
     return hex.length === 1 ? `0${hex}` : hex;
   };
 
-  return `#${getTwoCode(red)}${getTwoCode(green)}${getTwoCode(
-    blue
-  )}`.toUpperCase();
+  return `${getTwoCode(red)}${getTwoCode(green)}${getTwoCode(blue)}`.toUpperCase();
 }
 
 /**
- * take a color object of three values and return rbg color code
+ * take a color object of three decimal values and return a rgb color code
  * @param {object} color
  * @returns {string}
  */
 function generateRGBColor({ red, green, blue }) {
   return `rgb(${red}, ${green}, ${blue})`;
 }
+
 /**
- * convert Hex to decimal color object
+ * convert hex color to decimal colors object
  * @param {string} hex
  * @returns {object}
  */
-function hexToDecimalColor(hex) {
+function hexToDecimalColors(hex) {
   const red = parseInt(hex.slice(0, 2), 16);
   const green = parseInt(hex.slice(2, 4), 16);
   const blue = parseInt(hex.slice(4), 16);
+
   return {
     red,
     green,
