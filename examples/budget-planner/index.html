@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Budget Planner</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.0.2 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Local JS files -->
+		<script src="app.js" defer></script>
+	</head>
+	<body class="bg-secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mx-auto">
+					<div class="card card-body bg-light my-5">
+						<h1 class="display-6 fw-bold text-center mb-5 text-primary">
+							Budget Planner
+						</h1>
+						<div class="input-group mb-3">
+							<span class="input-group-text">৳</span>
+							<input
+								type="number"
+								class="form-control"
+								placeholder="Total Budget"
+								id="budget-input"
+							/>
+							<button
+								id="btn-budget"
+								class="btn btn-outline-success fw-bold"
+								type="button"
+							>
+								Add Budget
+							</button>
+						</div>
+						<div class="input-group mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Item"
+								id="item-input"
+							/>
+							<input
+								type="number"
+								class="form-control"
+								placeholder="Cost (৳)"
+								id="cost-input"
+							/>
+							<button
+								id="btn-cost"
+								class="btn btn-outline-warning fw-bold"
+								type="button"
+							>
+								Add Cost
+							</button>
+						</div>
+						<hr />
+
+						<div id="details">
+							<!-- <div
+								id="items-content"
+								class="items d-flex justify-content-between align-items-center mb-2"
+							>
+								<div class="item">House Rent</div>
+								<div class="cost">250.00</div>
+							</div> -->
+						</div>
+						<hr />
+
+						<div class="d-flex justify-content-between align-items-center mb-2">
+							<div class="budget-title fw-bold text-success">
+								Total Budget (৳)
+							</div>
+							<div id="total-budget" class="budget-number fw-bold text-success">
+								0.00
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-between align-items-center mb-2">
+							<div class="cost-title fw-bold text-warning">Total Cost (৳)</div>
+							<div id="total-cost" class="cost-number fw-bold text-warning">
+								0.00
+							</div>
+						</div>
+						<hr />
+
+						<div class="d-flex justify-content-between align-items-center mb-2">
+							<div class="remaining-title fw-bold text-danger">
+								Remaining (৳)
+							</div>
+							<div id="remaining" class="remaining-number fw-bold text-danger">
+								0.00
+							</div>
+						</div>
+						<hr />
+						<button
+							disabled
+							id="btn-reset"
+							class="btn btn-outline-danger fw-bold"
+						>
+							Reset
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

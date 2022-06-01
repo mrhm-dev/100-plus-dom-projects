@@ -1,0 +1,8 @@
+{
+  "name": "budget-planner",
+  "version": "1.0.0",
+  "description": "Planning with your budget",
+  "main": "index.js",
+  "author": "Aditya Chakraborty",
+  "license": "MIT"
+}
