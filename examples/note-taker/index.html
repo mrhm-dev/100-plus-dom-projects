@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Note App</title>
+      <link rel="stylesheet" href="Css/bootstrap.css">
+      <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+      <!-- dropdown menu -->
+      <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="https://www.youtube.com/channel/UC6FWrZ955nstqS6nchNeZwQ">Dark Notes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Theme selection section -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Theme
+                              </a>
+                              <div class="dropdown-menu" id='themeSelection' aria-labelledby="navbarDropdown">
+                                    <button class="dropdown-item active" value="Default" id="Notheme">Default </button>
+                                    <button class="dropdown-item" value="Full Dark" id="Darktheme">Dark </button>
+                                    <button class="dropdown-item" value="Light" id="Ligththeme">Light</button>
+                              </div>
+                        </li>
+                  </ul>
+                  <div class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id='searchBtn' type="search" placeholder="Search"
+                              aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0 " type="submit">Search</button>
+                  </div>
+            </div>
+      </nav>
+      <!-- add note section -->
+      <div class="container my-3">
+            <div class="card container-fluid">
+                  <div class="card-body">
+                        <h3 class="card-title text-capitalize">Welcome to Personal Note</h3>
+
+                        <div class="form-group">
+                              <label for="NoteTitle">Add Title</label>
+                              <input type="text" class="form-control " id="NoteTitle" placeholder="Enter Title..." required>
+                        </div>
+                        <div class="form-group">
+                              <label for="textArea text-capitalize">Add a Note</label>
+                              <textarea class="form-control" id="textArea" rows="3"  placeholder="Enter Notes ..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success text-capitalize" id="addNoteBtn">add notes</button>
+                  </div>
+            </div>
+            <hr>
+            <h5 class="card-title text-capitalize text-center">your Notes</h5>
+            <hr>
+            <!-- notesBody -->
+            <div class="notesContainer row justify-self-center" id="notesBody">
+
+                  <!-- notes will be added here dynamically by javascript -->
+
+            </div>
+      </div>
+
+
+
+
+
+
+
+
+      <script src="Js/jquery-3.5.1.slim.min.js"></script>
+      <script src="Js/bootstrap.js"></script>
+      <script src="Js/app.js"></script>
+
+</body>
+
+</html>
