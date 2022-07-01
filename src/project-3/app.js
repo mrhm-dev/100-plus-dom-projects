@@ -22,10 +22,12 @@ function main() {
 		const bgColor = generateHexColor();
 		root.style.backgroundColor = bgColor;
 		output.value = bgColor;
+		copyBtn.innerHTML = "Copy";
 	});
 
 	copyBtn.addEventListener('click', function () {
 		navigator.clipboard.writeText(output.value);
+		copyBtn.innerHTML = "Code Copied";
 	});
 }
 
